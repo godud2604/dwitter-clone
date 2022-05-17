@@ -1,6 +1,6 @@
 import express from 'express';
 import 'express-async-errors';
-import * as tweetController from '../controller/tweets.js';
+import * as tweetController from '../controller/tweet.js';
 
 const router = express.Router();
 
@@ -18,6 +18,6 @@ router.post('/', tweetController.createTweet);
 router.put('/:id', tweetController.updateTweet);
 
 // DELETE /tweets/:id
-router.delete('/:id', tweetController.deleteTweets);
+router.delete('/:id', tweetController.deleteTweet);
 
 export default router;
